@@ -82,6 +82,7 @@ $(function () {
             const result = JSON.parse(xhr.responseText);
             if(!result.error){
               $('.download-box').removeClass('d-none');
+              $('img').attr('src', result.thumbnail)
               $('.title').text(result.title);
               $('#duration').text(result.duration);
 

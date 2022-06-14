@@ -616,7 +616,7 @@ router.get('/', async (req, res) => {
   const dw_list = ['youtube', 'twitter', 'facebook', 
     'instagram', 'reddit', 'tedtalk', 'tiktok', 
     'vlive', 'vimeo', 'soundcloud', 'izlesene']
-    
+
   var dw = req.query.downloader
   if(dw && !dw_list.includes(dw)){
     res.sendStatus(404)
@@ -636,8 +636,6 @@ router.post('/extractor', body.none(), async (req, res) =>{
   var random = Math.floor(Math.random() * countProxy)
   const px = await Proxy.findOne().skip(random)
 
-  proxy = px.type + '://' + px.username + ':' + px.password + '@' + px.ip + ':' + px.port
-
   face_urls = ['facebook.com', 'fb.com', 'fb.watch']
   let options = {
     'dumpSingleJson': true,
@@ -647,7 +645,7 @@ router.post('/extractor', body.none(), async (req, res) =>{
     'preferFreeFormats': true,
     'youtubeSkipDashManifest': true,
     'referer': req.body.inputValue,
-    'proxy': proxy ? proxy : ""
+    'proxy': px ? px.type + '://' + px.username + ':' + px.password + '@' + px.ip + ':' + px.port : ""
   }
 
   if (face_urls.some(url => req.body.inputValue.includes(url))) {

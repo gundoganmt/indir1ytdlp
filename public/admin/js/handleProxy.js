@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // })
     })
 
-    // $('.create_proxy').on('click', function(e){
-    //     Swal.fire({
-    //         title: 'Demo mode active',
-    //         text: "This feature is disabled for demo",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //     })
-    // })
+    $('.create_proxy').on('click', function(e){
+        Swal.fire({
+            title: 'Demo mode active',
+            text: "This feature is disabled for demo",
+            icon: 'warning',
+            showCancelButton: true,
+        })
+    })
 })
