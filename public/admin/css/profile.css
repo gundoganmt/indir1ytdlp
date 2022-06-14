@@ -1,0 +1,50 @@
+.avatar-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: none;
+  margin: 0 10px 0;
+  transition: all .3s ease;
+}
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.avatar-wrapper .profile-pic {
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease;
+  object-fit: cover;
+}
+
+.avatar-wrapper .profile-pic:after {
+  font-family: Feather-Icons;
+  content: "\e9f1";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 120px;
+  position: absolute;
+  font-size: 60px;
+  background: #f0f0f0;
+  color: #aaa;
+  text-align: center;
+}
+
+.avatar-wrapper .upload-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.avatar-wrapper .file-upload {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
