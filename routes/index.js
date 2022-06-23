@@ -396,7 +396,7 @@ async function vlive(meta){
     else{
       filesize = await get_size(m.url)
     }
-    if(m.ext == 'mp4'){
+    if(m.protocol == 'http'){
       video_streams.push({
         'resolution': m.format_id.split('_')[1],
         'filesize': convertFileSize(filesize),
