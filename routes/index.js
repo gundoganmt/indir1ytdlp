@@ -652,10 +652,6 @@ router.post('/extractor', body.none(), async (req, res) =>{
     options.cookies = "fbcookies.txt"
   }
 
-  else if(req.body.inputValue.includes('instagram.com')){
-    options.cookies = "icookies.txt"
-  }
-
   else if(req.body.inputValue.includes('vimeo.com')){
     options.cookies = "vcookies.txt"
   }
